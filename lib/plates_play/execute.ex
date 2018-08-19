@@ -2,7 +2,7 @@ defmodule Execute do
   @timeout 1000
 
   def start do
-    plate_codes_file = "/home/m/live-test/ex/plates"
+    plate_codes_file = "/tmp/platecodes"
     wordlist_file = "/usr/share/dict/words"
 
     plate_codes = File.stream!(plate_codes_file) 
