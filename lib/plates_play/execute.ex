@@ -3,7 +3,7 @@ defmodule Execute do
 
   def start do
     plate_codes_file = "/home/m/live-test/ex/plates"
-    wordlist_file = "/home/m/live-test/ex/words"
+    wordlist_file = "/usr/share/dict/words"
 
     plate_codes = File.stream!(plate_codes_file) 
                   |> Stream.map(&String.trim/1)

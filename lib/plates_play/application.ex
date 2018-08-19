@@ -7,8 +7,8 @@ defmodule ExPlates.Application do
     [
       {:name, {:local, :worker}},
       {:worker_module, ExPlates.Worker},
-      {:size, 5},
-      {:max_overflow, 2}
+      {:size, 64},
+      {:max_overflow, 32}
     ]
   end
 

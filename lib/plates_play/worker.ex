@@ -12,7 +12,7 @@ defmodule ExPlates.Worker do
   def handle_call({word, plate_codes}, _from, state) do
     for plate_code <- plate_codes do
       is_valid = String.starts_with?(String.downcase(word), String.downcase(plate_code))
-      if is_valid do
+      if is_valid and not String.contains?(word, "'") do
         IO.puts word
       end
     end
