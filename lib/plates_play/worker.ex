@@ -1,4 +1,4 @@
-defmodule PlatesPlay.Worker do
+defmodule ExPlates.Worker do
   use GenServer
 
   def start_link(_) do

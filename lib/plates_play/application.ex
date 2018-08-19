@@ -1,4 +1,4 @@
-defmodule PlatesPlay.Application do
+defmodule ExPlates.Application do
   @moduledoc false
 
   use Application
@@ -6,7 +6,7 @@ defmodule PlatesPlay.Application do
   defp poolboy_config do
     [
       {:name, {:local, :worker}},
-      {:worker_module, PlatesPlay.Worker},
+      {:worker_module, ExPlates.Worker},
       {:size, 5},
       {:max_overflow, 2}
     ]
@@ -17,7 +17,7 @@ defmodule PlatesPlay.Application do
       :poolboy.child_spec(:worker, poolboy_config())
     ]
 
-    opts = [strategy: :one_for_one, name: PlatesPlay.Supervisor]
+    opts = [strategy: :one_for_one, name: ExPlates.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

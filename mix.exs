@@ -1,4 +1,4 @@
-defmodule PlatesPlay.MixProject do
+defmodule ExPlates.MixProject do
   use Mix.Project
 
   def project do
@@ -14,7 +14,7 @@ defmodule PlatesPlay.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {PlatesPlay.Application, []}
+      mod: {ExPlates.Application, []}
     ]
   end
 
