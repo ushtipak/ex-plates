@@ -13,9 +13,10 @@ defmodule ExPlates.Worker do
     for plate_code <- plate_codes do
       is_valid = String.starts_with?(String.downcase(word), String.downcase(plate_code))
       if is_valid and not String.contains?(word, "'") do
-        IO.puts word
+        IO.puts String.upcase(word)
       end
     end
     {:reply, word, state}
   end
+
 end
