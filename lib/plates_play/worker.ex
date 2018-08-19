@@ -9,7 +9,8 @@ defmodule ExPlates.Worker do
     {:ok, nil}
   end
 
-  def handle_call({word}, _from, state) do
+  def handle_call({word, plate_codes}, _from, state) do
+    IO.inspect plate_codes
     {:reply, word, state}
   end
 end
