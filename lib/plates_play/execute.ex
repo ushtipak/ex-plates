@@ -6,8 +6,8 @@ defmodule Execute do
     wordlist_file = "/home/m/live-test/ex/words"
 
     plate_codes = File.stream!(plate_codes_file) 
-            |> Stream.map(&String.trim/1) 
-            |> Enum.to_list
+                  |> Stream.map(&String.trim/1)
+                  |> Enum.to_list
 
     File.stream!(wordlist_file)
     |> Stream.map(&String.trim/1)
@@ -30,5 +30,4 @@ defmodule Execute do
   defp await_and_inspect(task), do:
     task
     |> Task.await(@timeout)
-    |> IO.inspect()
 end
