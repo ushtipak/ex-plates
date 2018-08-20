@@ -3,7 +3,7 @@ defmodule ExPlates.MixProject do
 
   def project do
     [
-      app: :plates_play,
+      app: :ex_plates,
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
